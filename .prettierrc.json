@@ -1,0 +1,9 @@
+{
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "semi": true,
+  "arrowParens": "avoid",
+  "importOrder": ["builtin", "external", "internal", "parent", "sibling", "index"],
+  "importOrderSeparation": true
+}
