@@ -7,22 +7,21 @@ import { Navigation } from "@/src/widgets/navigation";
 
 export default function Home() {
 	const { onOpen } = useModal();
+
 	return (
 		<div className={"flex justify-between"}>
 			<div className={"flex flex-col gap-10 "}>
 				<Account />
 				<Button
 					onClick={() => {
-						onOpen("authModal");
+						onOpen("popularCard");
 					}}
 				>
 					Играть
 				</Button>
 			</div>
 
-			<div>
-				<Navigation />
-			</div>
+			<Navigation />
 		</div>
 	);
 }

@@ -1,8 +1,8 @@
 import React from "react";
 
-import PropTypes from "prop-types";
 
 import { cn } from "@/src/shared/lib/utils";
+import PropTypes from 'prop-types';
 
 interface ITypographyProps {
 	variant?: "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6";

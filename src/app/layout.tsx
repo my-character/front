@@ -5,7 +5,7 @@ import "@/src/app/globals.css";
 import { cn } from "@/src/shared/lib/utils";
 import { ModalProvider } from "@/src/widgets/providers/modal-providers.";
 import { ThemeProvider } from "@/src/widgets/providers/theme-provider";
-import { ModeToggle } from "@/src/feature/theme-toggle";
+import Providers from "@/src/app/provider";
 
 const inter = Open_Sans({ subsets: ["latin"] });
 
@@ -30,15 +30,17 @@ export default function RootLayout({
 					"min-h-screen flex flex-col items-center justify-center dark:bg-dark-primary-bg ",
 				)}
 			>
-				<ThemeProvider
-					attribute="class"
-					defaultTheme="light"
-					enableSystem={false}
-					disableTransitionOnChange
-				>
-					{children}
-					<ModalProvider />
-				</ThemeProvider>
+				<Providers>
+					<ThemeProvider
+						attribute="class"
+						defaultTheme="light"
+						enableSystem={false}
+						disableTransitionOnChange
+					>
+						{children}
+						<ModalProvider />
+					</ThemeProvider>
+				</Providers>
 			</body>
 		</html>
 	);

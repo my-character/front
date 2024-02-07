@@ -17,11 +17,9 @@ export const AuthModal = () => {
 
 	return (
 		<Dialog open={isModalOpen} onOpenChange={onClose}>
-			<DialogContent className={" text-white p-6 overflow-hidden"}>
+			<DialogContent className={"min-w-lg"}>
 				<DialogHeader className={"px-6"}>
-					<DialogTitle>
-						<Typography variant={"h2"}>Вход</Typography>
-					</DialogTitle>
+					<DialogTitle>Вход</DialogTitle>
 				</DialogHeader>
 				<AuthForm />
 			</DialogContent>
